@@ -1,0 +1,143 @@
+---
+import Header from "../../components/Header.astro";
+---
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>The Sensational World of Omakase | A Jammin Life</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+<Header />
+
+<main class="post">
+
+  <h1>The Sensational World of Omakase</h1>
+
+  <p>I wrote a blog about a week ago expressing my distaste for Michelin starred restaurants. I mentioned omakase in that post, comparing it to Michelin star restaurants. I don’t hate Michelin restaurants – I just think that for the same price range, omakase is much more worth it.</p>
+
+  <p>Living in America, I had never heard of omakase. And when I went back to America after my long stay in Korea, I realized that it wasn’t just me. Both my friends and family were unfamiliar with omakase. But it’s not like it doesn’t exist in America. It’s there, but you just have to know what to look for.</p>
+
+  <p>Now if you are one of the many who don’t know what omakase is, it means “chef’s choice”. The chef literally stands in front of you to give you the best of the best foods of his/her choosing. You sit at the bar watching the chef cook and put together a series of little bites to give you. It’s not one big dish – it is a 10-15 course meal of 1 or 2 bites for each course.</p>
+
+  <p>Omakase usually implies sushi omakase. That is the original chef’s choice. They would get the freshest and best fish daily to serve. From tuna belly to uni and abalone to lobster, they’ve got everything covered.</p>
+
+  <div class="two-image-row">
+    <img src="/images/blog/omakase-1.webp" alt="Sushi omakase" />
+    <img src="/images/blog/omakase-2.webp" alt="Sushi omakase courses" />
+  </div>
+
+  <p>Korea took this concept and applied it to all sorts of food! Korean beef omakase, pork omakase, eel omakase, yakitori (skewer) omakase, etc. My favorite of these is beef. They get the tenderest cuts and serve it as regular steak, as a sandwich, as an ingredient in mixed rice, and more. They serve foods in between that don’t feature meat, but go so well with it.</p>
+
+  <p>Omakase ranges from $100-200 usually. Sometimes, it can go up to $500. It really depends on where you go. The price is so steep that you may hesitate to try, but it is more than just a meal – it is an experience.</p>
+
+  <p>During the time of my innocence in which I didn’t know what omakase was and had never spent more than a few tens of dollars for food, my friend had asked if I wanted to get omakase for dinner. I asked what it was and she said it was sushi. So I excitedly said yes and went to dinner with her. That meal still stands within the top 3 of the best meals of my life. It wasn’t just sushi – they served the best tamago I still can’t forget about and can’t get anywhere else. They served ankimo, which is fish liver and super rare to find in Korea.</p>
+
+  <p>I was so amazed by the dinner and was ready to pay and go. The bill came out, and ……. It was $180 per person!!! I nearly fainted for real. It definitely felt like an expensive meal, but not my entire bank account expensive. My mind fell into chaos and I saw my life flash before my eyes. I was a broke-ass sophomore in college about to spend all her money in one night. Maybe I’ll have to drop out to make money and my parents would disown me.</p>
+
+  <p>Thank the Lord God Almighty because my friend paid and told me she had no intention of having me pay anyway. In that moment, I felt like she gave me the best food I’ve ever had and even gave me a second chance at life. She was a hero.</p>
+
+  <p>Unfortunately though, that omakase experience made my standards for food get exponentially high. I couldn’t have regular sushi anymore, and I was curious about all the other omakases out there. I actually did end up taking a gap year from school to work (unrelated to omakase), and saved money to treat myself to omakase every two months.</p>
+
+
+  <p>Though I fear that you too will become addicted to omakase, I encourage you to treat yourself to an experience of a lifetime.</p>
+
+
+<div class="three-image-row">
+    <img src="/images/blog/omakase-3.webp" alt="Omakase course" />
+    <img src="/images/blog/omakase-4.webp" alt="Omakase dish" />
+    <img src="/images/blog/omakase-5.webp" alt="Omakase meal" />
+  </div>
+  <a class="back-link" href="/blog">← Back to Blog</a>
+
+</main>
+
+</body>
+</html>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
+  background: white;
+  color: #111;
+}
+
+.post {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 390;
+  line-height: 1.15;
+  margin-bottom: 5rem;
+}
+
+p {
+  font-size: 1.45rem;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+
+.two-image-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 700px;
+  margin: 3rem auto 5rem;
+}
+
+.three-image-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 4rem auto;
+}
+
+.two-image-row img,
+.three-image-row img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 3rem;
+  color: #111;
+  text-decoration: none;
+  border-bottom: 1px solid #111;
+}
+
+.back-link:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 800px) {
+  .post {
+    padding: 2rem;
+  }
+
+  p {
+    font-size: 1.15rem;
+  }
+
+  .two-image-row,
+  .three-image-row {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

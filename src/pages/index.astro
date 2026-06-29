@@ -1,11 +1,273 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>A Jammin Life</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <a class="brand" href="/">
+        <img src="/images/logo.png" alt="A Jammin Life logo" />
+        <span>A Jammin Life</span>
+      </a>
+
+      <button class="menu-button" id="menuButton" aria-label="Open menu">
+        ☰
+      </button>
+
+      <nav id="menu">
+        <a href="/about">About Me</a>
+        <a href="/blog">Blog</a>
+		<a href="/preorder">Preorder</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro">
+        <p>
+          Artisanal Flavors from Seoul to Your Soul: Unveiling the Art of
+          Korean Baking and Cooking
+        </p>
+      </section>
+
+      <img
+        src="/images/homepage.jpeg"
+        alt="Pumpkin Cheesecake"
+        class="hero-image"
+      />
+    </main>
+
+	<section class="bottom-row">
+  <form class="subscribe">
+    <input type="email" placeholder="your email (:" />
+    <button type="submit">Subscribe</button>
+  </form>
+
+  <div class="socials">
+  <a href="https://www.instagram.com/ajamminlife/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+    <img src="/images/instagram.png" alt="Instagram" />
+  </a>
+
+  <a href="https://www.youtube.com/@itsajamminlife" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+    <img src="/images/youtube.png" alt="YouTube" />
+  </a>
+
+  <a href="https://www.tiktok.com/@itsajamminlife" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+    <img src="/images/tiktok.png" alt="TikTok" />
+  </a>
+</div>
+</section>
+
+    <script>
+      const button = document.getElementById("menuButton");
+      const menu = document.getElementById("menu");
+
+      button?.addEventListener("click", () => {
+        menu?.classList.toggle("open");
+      });
+    </script>
+  </body>
+</html>
+
+<style>
+  body {
+    margin: 0;
+    background: #ffffff;
+    color: #252525;
+    font-family: "Josefin Sans", sans-serif;
+  }
+
+  header {
+    height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4rem;
+    position: relative;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    text-decoration: none;
+    color: #252525;
+  }
+
+  .brand img {
+    width: 62px;
+    height: 62px;
+    object-fit: contain;
+  }
+
+  .brand span {
+    font-size: 1.7rem;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+  }
+
+  .menu-button {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #252525;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 4rem;
+    background: white;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    z-index: 10;
+  }
+
+  nav.open {
+    display: grid;
+    gap: 1rem;
+  }
+
+  nav a {
+    color: #252525;
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+  }
+
+  .intro {
+    text-align: center;
+    padding: 3.5rem 1rem 2rem;
+  }
+
+  .intro p {
+    margin: 0 auto;
+    max-width: 850px;
+    font-size: 1.15rem;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
+  }
+
+  .hero-image {
+	width: 100%;
+  	max-width: 900px;
+  	height: auto;
+  	display: block;
+  	margin: 0 auto;
+  	border-radius: 12px;
+}
+
+  @media (max-width: 700px) {
+    header {
+      padding: 0 1.25rem;
+      height: 80px;
+    }
+
+    .brand img {
+      width: 48px;
+      height: 48px;
+    }
+
+    .brand span {
+      font-size: 1.25rem;
+    }
+
+    nav {
+      right: 1.25rem;
+      top: 70px;
+    }
+
+    .hero-image {
+      height: 360px;
+    }
+  }
+
+  .bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 4rem;
+}
+
+.subscribe {
+  display: flex;
+  flex: 1;
+  max-width: 900px;
+}
+
+.subscribe input {
+  flex: 1;
+  padding: 1rem 1.25rem;
+  border: 1px solid #cfd8dc;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+}
+
+.subscribe button {
+  padding: 1rem 1.5rem;
+  border: none;
+  background: #174e63;
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.socials a {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+}
+
+.socials img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.socials img:hover {
+  transform: scale(1.12);
+  opacity: 0.75;
+}
+
+@media (max-width: 800px) {
+  .bottom-row {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 2rem 1.25rem;
+  }
+
+  .subscribe {
+    max-width: none;
+  }
+
+  .socials {
+    justify-content: center;
+  }
+}
+
+</style>

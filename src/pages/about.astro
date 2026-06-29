@@ -1,0 +1,207 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>About Me | A Jammin Life</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+
+  <body>
+    <Header />
+
+    <main class="about-page">
+      <h1>About Me: A Jammin Life</h1>
+
+      <img
+        src="/images/about_me.jpeg"
+        alt="Jae from A Jammin Life"
+        class="about-photo"
+      />
+
+      <section class="about-text">
+        <p>
+          I am Jammin: part-time chef, full-time dog mom, dexterous handicraftsman,
+          matcha enthusiast, fainthearted adventurer, versatile innovator
+          and most of all, a big dreamer!
+        </p>
+
+        <p>
+          I’ve wanted to be a chef since I was 13 years old, but it took years of
+          convincing for my parents to allow me to go to culinary school on one condition:
+          that I pay for it myself. So I worked 3 part time jobs (overnight baker,
+          dinnertime restaurant server, and weekend office clerk) while attending school.
+        </p>
+
+        <p>
+          Despite running on fumes to afford school, I remember this time to be 
+          the happiest I had been. The magical moment began every night at 2 AM
+          when the world was asleep and the cafe would be the only flickering lights in the dark.
+          Playing the Gorillaz’s “On Melancholy Hill” in the background, I baked croissants
+          and pretzels, filling the air with the warm smell of sugar and butter. I watched
+          the sun rise through the floor-to-ceiling windows as the baristas arrived to open.
+          I traded fresh bread for my daily dose of caffeine, with the coffee smell blending
+          into the kitchen. By then my shift would be over and I would head to class to join
+          my newfound food-loving friends. Altogether, I was engulfed by the overwhelming sensations
+          of good food, good people, and good atmosphere. Since then, I have been pursuing to
+          feel that level of peaceful contentment again, and be able to share it with
+          those around me through food.
+        </p>
+      </section>
+
+    </main>
+
+    <Footer />
+
+    <script>
+      const button = document.getElementById("menuButton");
+      const menu = document.getElementById("menu");
+
+      button?.addEventListener("click", () => {
+        menu?.classList.toggle("open");
+      });
+    </script>
+  </body>
+</html>
+
+<style>
+  body {
+    margin: 0;
+    font-family: "Josefin Sans", sans-serif;
+    color: #111;
+    background: white;
+  }
+
+  header {
+    height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4rem;
+    position: relative;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    text-decoration: none;
+    color: #111;
+  }
+
+  .brand img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+  }
+
+  .brand span {
+    font-size: 1.5rem;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+  }
+
+  .menu-button {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #111;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 4rem;
+    background: white;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    z-index: 10;
+  }
+
+  nav.open {
+    display: grid;
+    gap: 1rem;
+  }
+
+  nav a {
+    color: #111;
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+  }
+
+  .about-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4rem 2rem 2rem;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 300;
+    margin: 0 0 2rem;
+    letter-spacing: 0.02em;
+  }
+
+  .about-photo {
+    width: min(560px, 85vw);
+    height: min(560px, 85vw);
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin: 0 auto 3rem;
+  }
+
+  .about-text {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  .about-text p {
+    font-size: clamp(1.1rem, 2.0vw, 1.5rem);
+    line-height: 1.8;
+    margin: 0 0 2.2rem;
+    font-weight: 350;
+  }
+
+
+  @media (max-width: 700px) {
+    header {
+      height: 80px;
+      padding: 0 1.25rem;
+    }
+
+    .brand img {
+      width: 46px;
+      height: 46px;
+    }
+
+    .brand span {
+      font-size: 1.2rem;
+    }
+
+    nav {
+      right: 1.25rem;
+      top: 70px;
+    }
+
+    .about-page {
+      padding: 3rem 1.25rem;
+    }
+  }
+</style>

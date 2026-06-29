@@ -1,0 +1,126 @@
+---
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Baking Tips and Rules of Thumb | A Jammin Life</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <Header />
+
+    <main class="post">
+      <p class="category">Kitchen 101</p>
+
+      <h1>Baking Tips and Rules of Thumb</h1>
+
+      <p class="intro">
+        I was cleaning out old computer files and discovered my baking notes from
+        culinary school that I wrote in 2017. You probably know all of this
+        already if you are a seasoned baker, but it’s a good reminder! And if
+        you are new in the game, this should help you tons as it did for me.
+        Ok, no more talking; let’s get baking!
+      </p>
+
+      <ul class="tips-list">
+        <li>Start the oven at 300° and use a pan at room temperature.</li>
+        <li>When coating a pan with oil, thoroughly oil ridges and edges where batter can stick to more easily.</li>
+        <li>When using a sheet tray, just use parchment paper, but oil can also be used in the corners to glue paper to the tray.</li>
+        <li>Always mix leaveners, like baking soda or baking powder, and sift with the dry ingredients first so that they are thoroughly distributed.</li>
+        <li>If you want to add nuts into the bread, toast them at 200–250° beforehand and let them cool. Time depends on size.</li>
+        <li>If you want to add nuts on top of the bread, don’t toast them since they will toast as the bread bakes.</li>
+        <li>If you want to add additional large-sized ingredients such as nuts, chocolate chips, fruits, or cheese, they go in after dry ingredients are stirred with the wet ingredients.</li>
+        <li>If you want to add additional small-sized ingredients such as herbs or juice, they go in when mixing the wet ingredients.</li>
+        <li>If you lay out your batter and use a cutter to cut out pieces, do not reroll the scraps more than once. It will form too much gluten and make them less soft.</li>
+        <li>Store butter in the refrigerator. Don’t melt and cool butter repeatedly.</li>
+        <li>Chill cookie dough before baking for a nice, chewy cookie. The dough is so aerated and soft that it will spread and the outside will bake faster.</li>
+        <li>Take out cookies before they are done because they will continue to bake on the sheet tray.</li>
+        <li>Do not depend on the color of cookies to determine if they are done. If they are brown, they are over baked.</li>
+        <li>Extra eggs in a batter or dough will cause more spread, more rise, a cakier texture, and faster browning.</li>
+        <li>When rolling out wet dough, cover and chill for about 30 minutes to let fats harden and give time for the flour to absorb moisture.</li>
+        <li>When whipping small batches of egg whites, don’t use a standing mixer and walk away. It will quickly over-whip.</li>
+        <li>Additional ingredients in a soufflé must be cooked off before adding into the base. If it goes in raw, it will come out raw.</li>
+        <li>Always add light ingredients to heavy ingredients and portion ⅓ at a time. For example, soufflés where you add whipped whites into the base ⅓ at a time.</li>
+        <li>Whipped egg whites fall apart quickly, so work with them as fast as possible.</li>
+        <li>Butter ramekins for soufflés so that they rise and slide up the ramekins easily and scoop out easily.</li>
+        <li>Don’t add lemon juice as acid when whisking egg whites. It is too acidic and will cause whites to coagulate.</li>
+        <li>Be extra careful and wear gloves when working with caramel. Sugar sits on your skin and burns.</li>
+        <li>Always let the pie crust rest in the refrigerator for at least 30 minutes.</li>
+        <li>Use specific types of pie pans as directed. Don’t make a pie recipe made for a regular-sized pan in a deep-dish pie pan and vice versa.</li>
+        <li>For tarts, use fingers to thoroughly press the dough into the edges. The sides won’t come out pretty if you aren’t completely thorough with it!</li>
+      </ul>
+
+      <a class="back-link" href="/blog">← Back to Blog</a>
+    </main>
+
+  </body>
+</html>
+
+<style>
+  body {
+    margin: 0;
+    font-family: "Josefin Sans", sans-serif;
+    background: white;
+    color: #111;
+  }
+
+  .post {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+
+  .category {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1.1;
+    font-weight: 380;
+    margin: 0 0 2rem;
+  }
+
+  .intro {
+    font-size: 1.35rem;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+  }
+
+  .tips-list {
+    padding-left: 1.5rem;
+  }
+
+  .tips-list li {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-top: 3rem;
+    color: #111;
+    text-decoration: none;
+    border-bottom: 1px solid #111;
+  }
+
+  .back-link:hover {
+    opacity: 0.6;
+  }
+</style>

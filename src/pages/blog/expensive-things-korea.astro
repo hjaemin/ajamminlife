@@ -1,0 +1,166 @@
+---
+import Header from "../../components/Header.astro";
+---
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>The Ridonculously Expensive Things in South Korea | A Jammin Life</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+<Header />
+
+<main class="post">
+
+  <h1>The Ridonculously Expensive Things in South Korea</h1>
+
+  <p>The answer to the question about my favorite food used to be “mango” growing up. My dad would buy 100 mangoes at a time (seriously) and I would eat at least 10 a day.</p>
+
+  <p>It wasn’t only mangoes I loved though. I loved all fruit, and our fridge would always be filled with at least 5 different types of fruit. On days I had school, my mom would just pack some cut mangoes, kiwis, pears, strawberries, and melons.</p>
+
+  <p>I had always heard fruit in Asia tastes sweeter and juicier, so one thing I was looking forward to in Korea was the fruit! Then I arrived here. And I was faced with the truth: fruit in Korea is ridonculously expensive. It is near un-purchasable unless you are the top 1%.</p>
+
+  <p>Let me show you some examples.</p>
+
+  <section class="price-grid">
+
+    <article class="price-item">
+      <img src="/images/blog/koreanmango.webp" alt="Expensive mangoes in Korea" />
+      <p>These 2 mangoes are 20,000 won, which is about $15.</p>
+    </article>
+
+    <article class="price-item">
+      <img src="/images/blog/koreanapple1.webp" alt="Expensive bag of apples in Korea" />
+      <p>This bag of sub-par looking apples are 28,000 won – about $21.</p>
+    </article>
+
+    <article class="price-item">
+      <img src="/images/blog/koreanapple2.webp" alt="Premium apples in Korea" />
+      <p>These are more attractive looking apples, and there’s a price to that. 6 of them costs 35,000 won, or $26.</p>
+    </article>
+
+    <article class="price-item">
+      <img src="/images/blog/koreanmelon.webp" alt="Korean melons" />
+      <p>Korean melons are literally cheaper in America, and I don’t understand how. These Korean melons are 4 for 25,000 won, or $19.</p>
+    </article>
+
+    <article class="price-item">
+      <img src="/images/blog/koreanzucchini.webp" alt="Expensive zucchini in Korea" />
+      <p>Though not a fruit, I needed the record to show that this one zucchini is 3,990 won, nearly $3.</p>
+    </article>
+
+    <article class="price-item">
+      <img src="/images/blog/koreanleek.webp" alt="Expensive chopped leek in Korea" />
+      <p>And this one leek chopped is 4,590 won – about $3.50.</p>
+    </article>
+
+  </section>
+
+  <p>One time, I was at a market staring at their mangoes. It was 10,000 won each, which is about $8 per mango. I really wanted one, but couldn’t justify spending that much on a single fruit. I couldn’t even get myself to leave – I just stood there looking at it. The market owner saw me and said, “These mangoes aren’t of the finest quality anyway, and I shouldn’t sell these to people. You can have them.” And he handed me three mangoes!! For free! The amount of joy and gratefulness I felt cannot be expressed into words. This happened over 5 years ago, and I still remember it like it was yesterday.</p>
+
+  <p>I had to actively brainwash myself while living in Korea into believing that I don’t really like fruit. I would get fruit cravings, but would try to quench it with drinks and sweet desserts. I got used to it after a long while, and I don’t feel the need to eat fruit anymore. I don’t think that’s a good thing at all because now I choose to eat a blueberry cheesecake over actual blueberries…</p>
+
+  <p>So if you are a fruit-lover, you are gonna have a hard time adjusting here. But we’ve got the best cafes and desserts so you can become like me! If you are willing to spend some money though, these fruits are not necessarily worth it, but it’s worth a try (: Korean tangerines from Jeju Island are some of the best you’ll ever taste. And strawberries here are incomparable to American ones. I am just here to prepare your hearts for the price tags!</p>
+
+  <a class="back-link" href="/blog">← Back to Blog</a>
+
+</main>
+</body>
+</html>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
+  background: white;
+  color: #111;
+}
+
+.post {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 5rem;
+}
+
+p {
+  font-size: 1.45rem;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem 4rem;
+  margin: 4rem 0 5rem;
+}
+
+.price-item {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.price-item img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+}
+
+.price-item p {
+  font-size: 1.35rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 3rem;
+  color: #111;
+  text-decoration: none;
+  border-bottom: 1px solid #111;
+}
+
+.back-link:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 1000px) {
+  .price-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .post {
+    padding: 2rem;
+  }
+
+  p,
+  .price-item p {
+    font-size: 1.15rem;
+  }
+
+  .price-item {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

@@ -1,0 +1,74 @@
+<header>
+  <a class="brand" href="/">
+    <img src="/images/logo.png" alt="A Jammin Life logo" />
+    <span>A Jammin Life</span>
+  </a>
+
+  <button class="menu-button" onclick="document.getElementById('menu').classList.toggle('open')">
+    ☰
+  </button>
+
+  <nav id="menu">
+    <a href="/about">About Me</a>
+    <a href="/blog">Blog</a>
+    <a href="/preorder">Preorder</a>
+  </nav>
+</header>
+
+
+<style>
+  header {
+    height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4rem;
+    position: relative;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: #111;
+  }
+
+  .brand img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+  }
+
+  .brand span {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.5rem;
+  }
+
+  .menu-button {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    right: 4rem;
+    top: 80px;
+    background: white;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,.12);
+  }
+
+  nav.open {
+    display: grid;
+    gap: 1rem;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #111;
+  }
+</style>
