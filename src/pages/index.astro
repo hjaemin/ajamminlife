@@ -50,25 +50,45 @@
       />
     </main>
 
-	<section class="bottom-row">
-  <form class="subscribe">
-    <input type="email" placeholder="your email (:" />
-    <button type="submit">Subscribe</button>
+<section class="bottom-row">
+  <div class="subscribe-wrapper">
+  <h3>Join the Jammin Community</h3>
+
+  <p>
+    New menus, drops, and stories of the Jammin Life delivered to your inbox.
+  </p>
+
+  <form
+    class="subscribe"
+    action="https://buttondown.com/api/emails/embed-subscribe/ajamminlife"
+    method="post"
+    target="popupwindow"
+    onsubmit="window.open('https://buttondown.com/ajamminlife', 'popupwindow')"
+  >
+    <input
+      type="email"
+      name="email"
+      placeholder="your email (:"
+      required
+    />
+
+    <button type="submit">Join</button>
   </form>
+</div>
 
   <div class="socials">
-  <a href="https://www.instagram.com/ajamminlife/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-    <img src="/images/instagram.png" alt="Instagram" />
-  </a>
+    <a href="https://www.instagram.com/ajamminlife/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+      <img src="/images/instagram.png" alt="Instagram" />
+    </a>
 
-  <a href="https://www.youtube.com/@itsajamminlife" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-    <img src="/images/youtube.png" alt="YouTube" />
-  </a>
+    <a href="https://www.youtube.com/@itsajamminlife" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+      <img src="/images/youtube.png" alt="YouTube" />
+    </a>
 
-  <a href="https://www.tiktok.com/@itsajamminlife" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-    <img src="/images/tiktok.png" alt="TikTok" />
-  </a>
-</div>
+    <a href="https://www.tiktok.com/@itsajamminlife" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+      <img src="/images/tiktok.png" alt="TikTok" />
+    </a>
+  </div>
 </section>
 
     <script>
@@ -197,18 +217,48 @@
     }
   }
 
-  .bottom-row {
+.bottom-row {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 3rem 7rem 4rem;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  padding: 3rem 4rem;
+}
+.subscribe-wrapper {
+  width: 650px;
+  max-width: 65vw;
+
+   margin-left: 1rem;
+}
+
+.subscribe-wrapper h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+.subscribe-wrapper p {
+  margin: 0 0 0.9rem;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: #666;
+  text-align: left;
 }
 
 .subscribe {
   display: flex;
-  flex: 1;
-  max-width: 900px;
+  width: 100%;
+}
+
+.subscribe {
+  display: flex;
+  width: 520px;
+  max-width: 55vw;
+  flex: 0 0 auto;
 }
 
 .subscribe input {
@@ -231,8 +281,11 @@
 
 .socials {
   display: flex;
+  flex-direction: row;
   gap: 1rem;
   align-items: center;
+  flex-shrink: 0;
+
 }
 
 .socials a {
@@ -248,7 +301,6 @@
   height: 32px;
   object-fit: contain;
   display: block;
-  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .socials img:hover {
@@ -257,11 +309,14 @@
 }
 
 @media (max-width: 800px) {
-  .bottom-row {
+ .bottom-row {
     flex-direction: column;
     align-items: stretch;
-    padding: 2rem 1.25rem;
+    margin: 2.5rem auto 3rem;
+    padding: 0 1.25rem;
   }
+
+
 
   .subscribe {
     max-width: none;
