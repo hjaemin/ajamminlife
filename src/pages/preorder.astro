@@ -24,17 +24,17 @@ import Header from "../components/Header.astro";
   <section class="intro">
     <p class="eyebrow">A Jammin Life</p>
 
-    <h1>Preorder: The Jammin Box</h1>
+    <h1>Preorder: The Next Pastry Drop</h1>
 
     <p>
-      The Jammin Box features a limited menu made fresh in small batches. The menu changes every week depending on seasonal ingredients, inspiration,
+      Each Jammin Pastry Drop features a limited menu made fresh in small batches. The menu changes every week depending on seasonal ingredients, inspiration,
       and what I’m excited to bake. Check back here for the newest weekly menu.
 
     </p>
   </section>
 
   <section class="box-info">
-    <h2>How the Weekly Jammin Box Works</h2>
+    <h2>How Each Pastry Drop Works</h2>
 
     <p>
       Every preorder is sold <strong>by the box rather than by individual pastries.</strong>
@@ -76,39 +76,50 @@ import Header from "../components/Header.astro";
 
     <p>
       Every pastry is made with my signature multigrain dough. Alongside premium white wheat flour, I incorporate 
-      whole wheat, einkorn, rye, and spelt to to add layers of nutty, earthy flavor and a little more depth to every bite. 
+      whole wheat, einkorn, rye, and spelt to add layers of nutty, earthy flavor and a little more depth to every bite. 
       The result is a pastry that's still buttery
       and indulgent, but with a little extra complexity and a touch of wholesomeness.
     </p>
   </section>
 
-  <section class="pickup-info">
-    <h2>Pickup Information</h2>
+<section class="pickup-info">
+  <h2>Next Drop Details</h2>
 
-    <div class="info-grid">
-      <div>
-        <h3>Location</h3>
-        <p>
-          Baltimore, Maryland<br />
-          Exact pickup location coming soon.
-        </p>
-      </div>
-
-      <div>
-        <h3>Date & Time</h3>
-        <p>
-          Weekly pickup times coming soon.
-        </p>
-      </div>
-
-      <div>
-        <h3>How to Buy</h3>
-        <p>
-          Online preorders will be available here in the future.
-        </p>
-      </div>
+  <div class="info-grid">
+    <div>
+      <h3>Pickup Location</h3>
+      <p>
+        1405 Point St<br />
+        Baltimore, MD 21231
+      </p>
     </div>
-  </section>
+
+    <div>
+      <h3>Date &amp; Time</h3>
+      <p>
+        July 25, 2026<br />
+        10:00 AM–12:00 PM
+      </p>
+    </div>
+
+<div>
+  <h3>How to Buy</h3>
+
+  <p class="drop-note">
+    Every pastry drop is made in limited quantities. Complete the order form below to reserve your Jammin Box!
+  </p>
+
+  <a
+    class="order-button"
+    href="PASTE-YOUR-ORDER-FORM-LINK-HERE"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Place an Order
+  </a>
+</div>
+  </div>
+</section>
 
 </main>
 
@@ -138,20 +149,20 @@ body {
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  font-size: 0.9rem;
+  font-size: 0.5rem;
   color: #777;
   margin-bottom: 1rem;
 }
 
 h1 {
-  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
   font-weight: 400;
   line-height: 1.1;
   margin: 0 0 2rem;
 }
 
 .intro p {
-  font-size: 1.35rem;
+  font-size: 1.2rem;
   line-height: 1.7;
 }
 
@@ -207,6 +218,28 @@ h1 {
   text-align: center;
 }
 
+.drop-note {
+  margin-bottom: 1.25rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.order-button {
+  display: inline-block;
+  padding: 0.9rem 1.6rem;
+  background: #174e63;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.order-button:hover {
+  background: #123d4d;
+}
+
 .info-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -226,6 +259,29 @@ h1 {
 .info-grid p {
   font-size: 1.15rem;
   line-height: 1.6;
+}
+
+.order-button {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.9rem 1.35rem;
+  background: #174e63;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1;
+  border: 1px solid #174e63;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.order-button:hover {
+  background: #ffffff;
+  color: #174e63;
+  transform: translateY(-2px);
 }
 .gallery-wrapper {
   display: flex;
