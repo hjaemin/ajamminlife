@@ -50,7 +50,7 @@ import Header from "../components/Header.astro";
     <p>
       Because every pastry is baked in limited quantities, individual substitutions
       are generally unavailable. If you have a food allergy or dietary restriction,
-      please review the allergen information listed for each item carefully before placing your order.
+      please review the <a href="/allergens">allergen information</a> listed for each item carefully before placing your order.
     </p>
 
     <p>
@@ -168,6 +168,8 @@ h1 {
   line-height: 1.7;
 }
 
+
+
 .box-info,
 .jammin-difference {
   max-width: 720px;
@@ -196,6 +198,20 @@ h1 {
 .jammin-difference p:last-child {
   margin-bottom: 0;
 }
+
+
+.box-info a {
+  color: #b43b3b;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.box-info a:hover {
+  opacity: 0.7;
+}
+
 
 .menu-image-section {
   max-width: 850px;
