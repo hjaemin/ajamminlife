@@ -1,0 +1,361 @@
+---
+import Header from "../components/Header.astro";
+---
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Weekly Menu | A Jammin Life</title>
+
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+<Header />
+
+<main class="menu-page">
+
+  <section class="intro">
+    <p class="eyebrow">A Jammin Life</p>
+
+    <h1>Preorder: The Next Pastry Drop</h1>
+
+    <p>
+      Each Jammin Pastry Drop features a limited menu made fresh in small batches. The menu changes every week depending on seasonal ingredients, inspiration,
+      and what I’m excited to bake. Check back here for the newest weekly menu.
+
+    </p>
+  </section>
+
+
+<section class="pickup-info">
+  <h2>Order Information</h2>
+
+  <div class="info-grid">
+    <div>
+      <h3>Pickup Location</h3>
+      <p>
+        1405 Point St<br />
+        Baltimore, MD 21231
+      </p>
+    </div>
+
+    <div>
+      <h3>Date &amp; Time</h3>
+      <p>
+        July 25, 2026<br />
+        10:00 AM–12:00 PM
+      </p>
+    </div>
+
+<div>
+  <h3>How to Buy</h3>
+
+  <p class="drop-note">
+    Every pastry drop is made in limited quantities. Complete the order form below to reserve your Jammin Box!
+  </p>
+
+  <a
+    class="order-button"
+    href="https://docs.google.com/forms/d/e/1FAIpQLSedhJwvGfwDvgGseNIbuESPJD18IJUpP10LHgqt4KgFlt5A6A/viewform?usp=dialog"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Place an Order
+  </a>
+</div>
+  </div>
+</section>
+
+
+
+<div class="gallery-wrapper">
+  <div class="pastry-gallery">
+    <img src="/images/pastry1.jpeg" alt="croissant">
+    <img src="/images/pastry6.jpg" alt="pastries">
+    <img src="/images/pastry3.png" alt="pistachio croissant">
+    <img src="/images/pastry4.jpeg" alt="financier">
+    <img src="/images/pastry5.jpeg" alt="croissants">
+  </div>
+</div>
+
+  <section class="menu-image-section">
+    <img src="/images/July25.png" alt="This week's menu for A Jammin Life" />
+  </section>
+
+
+  <section class="box-info">
+    <h2>How Each Pastry Drop Works</h2>
+
+    <p>
+      Every preorder is sold <strong>by the box rather than by individual pastries.</strong>
+    </p>
+
+    <p>
+      Each week's box includes <strong>one of every pastry featured on the menu</strong>,
+      allowing you to enjoy the full collection of flavors for that week.
+    </p>
+
+    <p>
+      Because every pastry is baked in limited quantities, individual substitutions
+      are generally unavailable. If you have a food allergy or dietary restriction,
+      please review the <a href="/allergens">allergen information</a> listed for each item carefully before placing your order.
+    </p>
+
+    <p>
+      My goal is to create a tasting experience rather than simply selling pastries —
+      each weekly menu is designed to be enjoyed as a complete collection.
+    </p>
+  </section>
+  
+</main>
+
+</body>
+</html>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
+  background: #fff;
+  color: #111;
+}
+
+.menu-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem 6rem;
+}
+
+.intro {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 4rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.5rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0 0 2rem;
+}
+
+.intro p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+
+
+.box-info,
+.jammin-difference {
+  max-width: 720px;
+  margin: 0 auto 5rem;
+  padding: 2.5rem 2.75rem;
+  border: 1px solid #cfcfcf;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.box-info h2,
+.jammin-difference h2 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin: 0 0 1.5rem;
+}
+
+.box-info p,
+.jammin-difference p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin: 0 0 1.5rem;
+}
+
+.box-info p:last-child,
+.jammin-difference p:last-child {
+  margin-bottom: 0;
+}
+
+
+.box-info a {
+  color: #b43b3b;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.box-info a:hover {
+  opacity: 0.7;
+}
+
+
+.menu-image-section {
+  max-width: 850px;
+  margin: 0 auto 5rem;
+}
+
+.menu-image-section img {
+  width: 100%;
+  display: block;
+  border: 1px solid #eee;
+}
+
+.pickup-info {
+  border-top: 1px solid #ddd;
+  padding-top: 4rem;
+}
+
+.pickup-info h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.drop-note {
+  margin-bottom: 1.25rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.order-button {
+  display: inline-block;
+  padding: 0.9rem 1.6rem;
+  background: #174e63;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.order-button:hover {
+  background: #123d4d;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.info-grid div {
+  border: 1px solid #ddd;
+  padding: 2rem;
+}
+
+.info-grid h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.info-grid p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+.order-button {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.9rem 1.35rem;
+  background: #174e63;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1;
+  border: 1px solid #174e63;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.order-button:hover {
+  background: #ffffff;
+  color: #174e63;
+  transform: translateY(-2px);
+}
+.gallery-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 2.5rem 0 3rem;
+}
+
+.pastry-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+
+  width: fit-content;
+  margin: 0 auto;
+}
+.pastry-gallery img {
+  width: 155px !important;
+  height: 225px !important;
+  min-width: 155px;
+  max-width: 155px;
+
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  transition: transform .2s ease;
+}
+
+.pastry-gallery img:hover {
+  transform: translateY(-4px);
+}
+
+@media (max-width: 800px) {
+  .menu-page {
+    padding: 3rem 1.5rem 5rem;
+  }
+
+  .intro p,
+  .box-info p,
+  .jammin-difference p {
+    font-size: 1.15rem;
+  }
+
+  .box-info,
+  .jammin-difference {
+    max-width: 100%;
+    padding: 2rem;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pastry-gallery {
+    flex-wrap: wrap;
+    max-width: 380px;
+  }
+.pastry-gallery img {
+  width: 115px !important;
+  height: 165px !important;
+  min-width: 115px;
+  max-width: 115px;
+}
+
+}
+</style>
