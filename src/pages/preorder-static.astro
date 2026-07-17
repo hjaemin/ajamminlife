@@ -29,15 +29,63 @@ import Header from "../components/Header.astro";
     <h1>Preorder: The Next Pastry Drop</h1>
 
     <p>
-      Each Jammin Pastry Drop features a limited menu made fresh in small batches. The menu changes every week depending on seasonal ingredients, inspiration, and whatever I'm excited to bake. 
-      Subscribe on the home page to have each new pastry drop delivered to your inbox, or check back here for the latest weekly menu.
+      Each Jammin Pastry Drop features a limited menu made fresh in small batches. The menu changes every week depending on seasonal ingredients, inspiration,
+      and what I’m excited to bake. Check back here for the newest weekly menu.
 
     </p>
   </section>
 
+  <section class="box-info">
+    <h2>How Each Pastry Drop Works</h2>
+
+    <p>
+      Every preorder is sold <strong>by the box rather than by individual pastries.</strong>
+    </p>
+
+    <p>
+      Each week's box includes <strong>one of every pastry featured on the menu</strong>,
+      allowing you to enjoy the full collection of flavors for that week.
+    </p>
+
+    <p>
+      Because every pastry is baked in limited quantities, individual substitutions
+      are generally unavailable. If you have a food allergy or dietary restriction,
+      please review the <a href="/allergens">allergen information</a> listed for each item carefully before placing your order.
+    </p>
+
+    <p>
+      My goal is to create a tasting experience rather than simply selling pastries —
+      each weekly menu is designed to be enjoyed as a complete collection.
+    </p>
+  </section>
+
+<div class="gallery-wrapper">
+  <div class="pastry-gallery">
+    <img src="/images/pastry1.jpeg" alt="croissant">
+    <img src="/images/pastry6.jpg" alt="pastries">
+    <img src="/images/pastry3.png" alt="pistachio croissant">
+    <img src="/images/pastry4.jpeg" alt="financier">
+    <img src="/images/pastry5.jpeg" alt="croissants">
+  </div>
+</div>
+
+  <section class="menu-image-section">
+    <img src="/images/July25Drop.png" alt="This week's menu for A Jammin Life" />
+  </section>
+
+  <section class="jammin-difference">
+    <h2>The Jammin Difference</h2>
+
+    <p>
+      Every pastry is made with my signature multigrain dough. Alongside premium white wheat flour, I incorporate 
+      whole wheat, einkorn, rye, and spelt to add layers of nutty, earthy flavor and a little more depth to every bite. 
+      The result is a pastry that's still buttery
+      and indulgent, but with a little extra complexity and a touch of wholesomeness.
+    </p>
+  </section>
 
 <section class="pickup-info">
-  <h2>Order Information</h2>
+  <h2>Next Drop Details</h2>
 
   <div class="info-grid">
     <div>
@@ -69,54 +117,12 @@ import Header from "../components/Header.astro";
     target="_blank"
     rel="noopener noreferrer"
   >
-    Reserve Your Box
+    Place an Order
   </a>
 </div>
   </div>
 </section>
 
-<hr class="section-divider" />
-
-
-<div class="gallery-wrapper">
-  <div class="pastry-gallery">
-    <img src="/images/pastry1.jpeg" alt="croissant">
-    <img src="/images/pastry6.jpg" alt="pastries">
-    <img src="/images/chouxpic.jpg" alt="choux">
-    <img src="/images/pastry4.jpeg" alt="financier">
-    <img src="/images/pastriespic.jpg" alt="pastries">
-  </div>
-</div>
-
-  <section class="menu-image-section">
-    <img src="/images/julydrop.png" alt="This week's menu for A Jammin Life" />
-  </section>
-
-
-  <section class="box-info">
-    <h2>How Each Pastry Drop Works</h2>
-
-    <p>
-      Every preorder is sold <strong>by the box rather than by individual pastries.</strong>
-    </p>
-
-    <p>
-      Each week's box includes <strong>one of every pastry featured on the menu</strong>,
-      allowing you to enjoy the full collection of flavors for that week.
-    </p>
-
-    <p>
-      Because every pastry is baked in limited quantities, individual substitutions
-      are generally unavailable. If you have a food allergy or dietary restriction,
-      please review the <a href="/allergens">allergen information</a> listed for each item carefully before placing your order.
-    </p>
-
-    <p>
-      My goal is to create a tasting experience rather than simply selling pastries —
-      each weekly menu is designed to be enjoyed as a complete collection.
-    </p>
-  </section>
-  
 </main>
 
 </body>
@@ -162,11 +168,7 @@ h1 {
   line-height: 1.7;
 }
 
-.section-divider {
-  border: none;
-  border-top: 1px solid #e8e8e8;
-  margin: 4rem 0;
-}
+
 
 .box-info,
 .jammin-difference {
@@ -228,7 +230,7 @@ h1 {
 }
 
 .pickup-info h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 400;
   margin-bottom: 2rem;
   text-align: center;
