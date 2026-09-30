@@ -116,6 +116,60 @@ import Header from "../components/Header.astro";
       each weekly menu is designed to be enjoyed as a complete collection.
     </p>
   </section>
+
+  <hr class="section-divider" />
+
+<section class="previous-drops">
+  <h2>Previous Drops</h2>
+
+  <p class="previous-drops-intro">
+    A look back at pastries from previous Jammin Drops.
+  </p>
+
+  <div class="previous-drops-gallery">
+
+    <figure class="previous-drop-item">
+      <img
+        src="/images/bananacinnamonroll.jpg"
+        alt="Banana Cinnamon Roll"
+      />
+      <figcaption>Banana Cinnamon Roll</figcaption>
+    </figure>
+
+    <figure class="previous-drop-item">
+      <img
+        src="/images/almondraspberrycroissant.jpg"
+        alt="Almond Raspberry Croissant"
+      />
+      <figcaption>Almond Raspberry Croissant</figcaption>
+    </figure>
+
+    <figure class="previous-drop-item">
+      <img
+        src="/images/financiercollection2.jpg"
+        alt="Financier Collection"
+      />
+      <figcaption>Financier Collection</figcaption>
+    </figure>
+
+    <figure class="previous-drop-item">
+      <img
+        src="/images/pineapplegateau.JPEG"
+        alt="Pineapple Gateau Breton"
+      />
+      <figcaption>Pineapple Gateau Breton</figcaption>
+    </figure>
+
+    <figure class="previous-drop-item">
+      <img
+        src="/images/pastries.jpg"
+        alt="Pastries Box"
+      />
+      <figcaption>Pastries Box</figcaption>
+    </figure>
+
+  </div>
+</section>
   
 </main>
 
@@ -123,6 +177,58 @@ import Header from "../components/Header.astro";
 </html>
 
 <style>
+
+.previous-drops {
+  margin: 5rem auto 0;
+  text-align: center;
+}
+
+.previous-drops h2 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin: 0 0 0.75rem;
+}
+
+.previous-drops-intro {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0 0 2.5rem;
+}
+
+.previous-drops-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.previous-drop-item {
+  width: 155px;
+  margin: 0;
+}
+
+.previous-drop-item img {
+  width: 155px;
+  height: 225px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.previous-drop-item img:hover {
+  transform: translateY(-4px);
+}
+
+.previous-drop-item figcaption {
+  margin-top: 0.8rem;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  font-weight: 400;
+}
+
+
 body {
   margin: 0;
   font-family: "Josefin Sans", sans-serif;
@@ -360,6 +466,27 @@ h1 {
   height: 165px !important;
   min-width: 115px;
   max-width: 115px;
+}
+
+.previous-drops {
+  margin-top: 4rem;
+}
+
+.previous-drops-gallery {
+  gap: 1.25rem 0.8rem;
+}
+
+.previous-drop-item {
+  width: 115px;
+}
+
+.previous-drop-item img {
+  width: 115px;
+  height: 165px;
+}
+
+.previous-drop-item figcaption {
+  font-size: 0.85rem;
 }
 
 }
